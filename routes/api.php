@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Resources\Post;
+use App\Models\Post as ModelsPost;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -16,4 +18,15 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
+});
+Route::get('/posts', function () {
+    $posts = ModelsPost::all();
+    $i=0;
+    $data='';
+    foreach ($posts as $post) {
+        $posts[$i]->comments=ModelsPost::find($post->id)->comments;
+        $data.=$post[$i];
+        $i++;
+    }
+    return new Post($posts) ;
 });

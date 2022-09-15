@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\NotesController;
+use App\Http\Controllers\CommentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +17,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index',['title' => 'Mainpage']);
 });
+Route::get('/notes', [NotesController::class,'index']);
+Route::post('/notes', [NotesController::class,'formsubmit']);
+Route::resource('post',PostController::class);
+Route::resource('comment',CommentController::class);
