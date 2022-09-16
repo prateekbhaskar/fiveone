@@ -22,10 +22,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('/posts', function () {
     $posts = ModelsPost::all();
     $i=0;
-    $data='';
     foreach ($posts as $post) {
         $posts[$i]->comments=ModelsPost::find($post->id)->comments;
-        $data.=$post[$i];
         $i++;
     }
     return new Post($posts) ;

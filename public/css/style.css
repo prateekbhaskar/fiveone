@@ -2,46 +2,157 @@ body {
     font-family: 'Nunito', sans-serif;
     text-align: center;
 }
-.header{
-    display:flex;
+
+.header {
+    display: flex;
     background-color: cyan;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
+    top: 0;
+    position: -webkit-sticky;
+    /* Safari */
+    position: sticky;
 }
-.header button{
-    margin:10px;
+
+.header button {
+    margin: 10px;
     background-color: blue;
-    color:white;
+    color: white;
     font-size: 2vw;
     font-weight: bold;
     border: 2px solid red;
     border-radius: 10px;
-    padding:5px;
+    padding: 5px;
 }
-.form{
+
+.form {
 
     margin: auto;
     margin-top: 50px;
-    padding:50px;
-    width:40%;
-    background-color:blanchedalmond;
+    padding: 50px;
+    width: 40%;
+    background-color: blanchedalmond;
     font-size: 1.2vw;
 }
-.form input{
+
+.form input {
     width: auto;
-    height:auto;
+    height: auto;
     font-size: 2vw;
-    margin:10px;
+    margin: 10px;
 }
 
-.form .button{
+.form .button {
     background-color: darkgreen;
-    color:white;
+    color: white;
     font-weight: bold;
     border-radius: 10px;
 }
+
 .error {
-    color:red;
+    color: red;
     font-size: 1vw;
+}
+
+.post-comment {
+    margin: auto;
+    background-color: blue;
+    font-size: 1vw;
+    text-align: left;
+    padding: 50px;
+}
+
+.post {
+    background-color: aliceblue;
+    font-size: 1.5vw;
+    font-weight: bold;
+    border-radius: 10px;
+    margin:10px;
+    padding:10px;
+}
+
+.comment {
+    background-color: blueviolet;
+    margin: 5px;
+    color: white;
+    border-radius: 10px;
+    font-size: 1.2vw;
+    padding:10px;
+}
+
+.create-post-button {
+    border-radius: 10px;
+    background-color: cyan;
+    font-size: 2vw;
+    font-weight: bold;
+    margin: 5px;
+    padding: 5px;
+}
+
+.edit-post {
+    border-radius: 10px;
+    background-color: green;
+    color: white;
+    font-size: 1.2vw;
+    font-weight: bold;
+    margin: 5px;
+    padding: 5px;
+}
+
+.delete-post {
+    color: white;
+    border-radius: 10px;
+    background-color: red;
+    font-size: 1.2vw;
+    font-weight: bold;
+    margin: 5px;
+    padding: 5px;
+}
+
+.create-comment-button {
+    border-radius: 10px;
+    background-color:greenyellow;
+    font-size: 1.5vw;
+    font-weight: bold;
+    margin: 5px;
+    padding: 5px;
+}
+
+.edit-comment {
+    border-radius: 10px;
+    background-color: green;
+    color: white;
+    font-size: 1vw;
+    font-weight: bold;
+    margin: 5px;
+    padding: 5px;
+}
+
+.delete-comment {
+    color: white;
+    border-radius: 10px;
+    background-color: red;
+    font-size: 1vw;
+    font-weight: bold;
+    margin: 5px;
+    padding: 5px;
+}
+.message
+{
+    position: absolute;
+    top:0;
+    left:35%;
+    margin:10px;
+    background-color: darkmagenta;
+    font-size: 2vw;
+    color: chartreuse;
+    border-radius: 20px;
+    padding: 10px;
+    font-weight: bold;
+}
+.chart{
+    height:20%;
+    width:40%;
+    display:inline-flex;
 }

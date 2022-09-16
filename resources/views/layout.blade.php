@@ -11,18 +11,22 @@
     <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
     <!-- Styles -->
-    <link rel='stylesheet' href='css/style.css'>
+    <link rel='stylesheet' href='../../css/style.css'>
 </head>
 
 <body>
     <div class='header'>
         <button onclick='location.replace("/")' style="background-color:red">Home</button>
-        <button onclick='location.replace("/notes")'>Find miminum notes required</button>
+        <button onclick='location.replace("/notes")'>Find minimum notes required</button>
         <button onclick='location.replace("/crud")'>CRUD</button>
-        <button onclick='location.replace("/api/posts")'>See all post and comment</button>
-        <button onclick='location.replace("chart")'>See Chart</button>
+        <button onclick='location.replace("/api/posts")'>See all post and comment-JSON</button>
+        <button onclick='location.replace("/chart")'>See Chart</button>
     </div>
     @yield('content')
 </body>
-<script src='js/js.js'></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src='../../js/js.js'></script>
 </html>
+@if(!empty(session('message')))
+<div class='message'>{{session('message')}}</div>
+@endif
